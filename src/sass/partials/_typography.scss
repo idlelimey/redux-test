@@ -1,0 +1,67 @@
+//@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400');
+
+// fonts
+$font-family : 'Segoe UI', sans-serif;
+$font-weight-light : 100;
+$font-weight-regular: 300;
+$font-weight-heavy : 400;
+$font-height : 1.95;
+$heading-height : 125%;
+
+
+* {
+    font-family: $font-family !important;
+    color: $dark-grey;
+    line-height: $font-height;
+    letter-spacing: -0.01rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: $heading-height;
+    background-image: linear-gradient(135deg, $primary 0%, $secondary 100%) !important;
+    color:transparent !important;
+    background-clip: text;
+    display: inline-block;
+    margin:0;
+    padding-bottom:0.5rem;
+    &::selection {
+        background-color: $primary;
+        color: lighten($primary, 66);
+    }
+}
+
+h1 {
+    font-size: 3.85rem;
+    font-weight: $font-weight-light;
+}
+
+h2 {
+    font-size: 2.85rem;
+    font-weight: $font-weight-light; 
+}
+
+h3 {
+    font-size: 2.15rem;
+    font-weight: $font-weight-light; 
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.875rem;
+}
+
+p {
+    font-size: 1.125rem;
+    font-weight: 200;
+    &::selection {
+        background-color: $primary;
+        color: lighten($primary, 66);
+    }
+}
