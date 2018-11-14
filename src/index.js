@@ -1,3 +1,8 @@
+/*  TODO:
+    1. Reactstrap integration. DONE.
+    2. Install router.
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './sass/styles.scss';

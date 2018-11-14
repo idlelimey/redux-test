@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import { Container, Row, Col } from 'reactstrap';
 
 import { connect } from 'react-redux';
 import { defaultFunction } from './actions';
@@ -13,17 +13,29 @@ class App extends Component {
 
   render() {
     return (
-        <div>
-            <nav>
-                Nav Component goes here.
-            </nav>
-            <section id='content'>
-                Content goes here.  Install Router.
-            </section>
-            <footer>
-                Footer Component goes here.
-            </footer>
-      </div>
+        <Container>
+            <Row>
+                <Col>
+                    <nav>
+                        Nav Component goes here.
+                    </nav>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <section id='content'>
+                        Content goes here.  Install Router.
+                    </section>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <footer>
+                        Footer Component goes here.
+                    </footer>
+                </Col>
+            </Row>
+        </Container>
     );
   }
 }
