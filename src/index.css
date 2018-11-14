@@ -3,3 +3,18 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+nav {
+    width: 100%;
+    background: #ddd;
+    padding:2rem;
+}
+
+section {
+    padding: 2rem;
+}
+
+footer {
+    padding: 2rem;
+    background: #f4f4f4;
+}

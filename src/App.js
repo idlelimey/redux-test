@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import { connect } from 'react-redux';
@@ -14,8 +13,16 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        React Redux Starter Template
+        <div>
+            <nav>
+                Nav Component goes here.
+            </nav>
+            <section id='content'>
+                Content goes here.  Install Router.
+            </section>
+            <footer>
+                Footer Component goes here.
+            </footer>
       </div>
     );
   }
