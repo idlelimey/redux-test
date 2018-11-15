@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
 // calling the default reducer to create a link
-import defaultReducer from './default-reducer';
+import siteReducer from './siteReducer';
 
 const rootReducers = combineReducers({
     // add reducer files references here
-    default: defaultReducer
+    site: siteReducer
 });
 
 export default rootReducers;

@@ -24,7 +24,9 @@ $dark-bg            : rgba(black,0.9);//#0b172a;
 //#013461;
 $info: #88d5bb;
 
+@import 'bootstrap/scss/bootstrap.scss';
 @import 'partials/typography';
+@import 'partials/menu';
 
 body {
     margin: 0;

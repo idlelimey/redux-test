@@ -1,6 +1,7 @@
 /*  TODO:
     1. Reactstrap integration. DONE.
     2. Install router.
+    3. Setup Redux store.
 */
 
 import React from 'react';
@@ -12,17 +13,23 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
-import reducers from './reducers';
+import rootReducers from './reducers';
 import ReduxPromise from 'redux-promise';
 
+const initialState = {
+    site : {
+        page    : 'home',
+        theme   : 'light'
+    }
+};
+
 const store = createStore(
-    reducers,
+    rootReducers,
+    initialState,
     applyMiddleware(logger, ReduxPromise)
 );
 
-ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>
-    , document.getElementById('root'));
+
+ReactDOM.render( <Provider store={store}><App /></Provider> , document.getElementById('root') );
+
 registerServiceWorker();

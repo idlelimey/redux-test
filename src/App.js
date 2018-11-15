@@ -1,50 +1,63 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container } from 'reactstrap';
+import {
+    Route,
+    HashRouter
+} from 'react-router-dom';
 
 import { connect } from 'react-redux';
-import { defaultFunction } from './actions';
+import {
+    defaultFunction,
+    setTheme,
+    setPage
+} from './actions';
+
+import Menu     from './Menu';
+import Home     from './Home';
+import Page     from './Page';
+import Contact  from './Contact';
+import Cards    from './Cards';
 
 class App extends Component {
 
-  componentDidMount() {
-    // call default function to display redux operation
-    this.props.defaultFunction();
-  }
+    componentDidMount() {
+        // call default function to display redux operation
+        this.props.defaultFunction();
+    }
 
-  render() {
-    return (
-        <Container>
-            <Row>
-                <Col>
-                    <nav>
-                        Nav Component goes here.
-                    </nav>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
+
+    render() {
+        return (
+            <HashRouter>
+                <Container id='site' className={this.props.site.theme + ' ' + this.props.site.page}>
+                    <Menu currentTheme={this.props.site.theme} />
                     <section id='content'>
-                        Content goes here.  Install Router.
+                        <Route exact path="/" component={Home} />
+                        <Route path="/page" component={Page} />
+                        <Route path="/contact/" component={Contact} />
+                        <Route path="/cards" component={Cards} />
                     </section>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
                     <footer>
                         Footer Component goes here.
+                        <button onClick={() => this.props.setTheme(this.props.site.theme)}>{this.props.site.theme}</button>
                     </footer>
-                </Col>
-            </Row>
-        </Container>
-    );
-  }
+                </Container>
+            </HashRouter>
+        );
+    }
 }
+
 
 // function to convert the global state obtained from redux to local props
 function mapStateToProps(state) {
   return {
-    default: state.default
+    site: state.site
   };
 }
 
-export default connect(mapStateToProps, { defaultFunction })(App);
+
+export default connect(mapStateToProps, {
+    defaultFunction,
+    setTheme,
+    setPage
+})(App);

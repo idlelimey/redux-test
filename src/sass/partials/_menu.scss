@@ -1,0 +1,111 @@
+$menu-icon-button-size : 3rem;
+
+#root {
+    .menu-icon-button {
+        display     : block;
+        height      : $menu-icon-button-size;
+        width       : $menu-icon-button-size;
+        line-height : $menu-icon-button-size; 
+        padding     : 0;
+        cursor      : pointer;
+        user-select : none;
+        outline     : none;
+        background  : transparent;
+        border      : 0;
+        text-align  : center;
+        font-size   : 1.5rem;
+    }
+    #menu {
+        background: rgba(white, 0.9);
+    }
+    .nav {
+        & .nav-item .nav-link {
+            &.active {
+                box-shadow: 0px 3px 0px $primary;
+            }
+        }
+        .theme-switch {
+            line-height      : 1.85rem;
+            color            : $dark-grey;
+            transform        : rotate(45deg);
+            transform-origin : center;
+            text-align       : center;
+            background       : $lightest-grey;
+            border-radius    : 99%;
+            
+        }
+
+    }
+
+    & > div.dark {
+        #menu {
+            background: $dark-bg;
+        }
+        .theme-switch {
+            color       : white;
+        }
+    }
+}
+
+
+#nav-open {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+#nav-items, #nav-open {
+    float: left;
+    color: #fff;
+}
+
+#nav-open span {
+    transform: translateX(12px);
+}
+
+#nav-open span, #nav-open span:before, #nav-open span:after {
+    cursor: pointer;
+    height: 2px;
+    width: 26px;
+    background: black;
+    position: absolute;
+    display: block;
+    content: '';
+}
+
+#nav-open span:before {
+    top: -9px;
+    transform: rotate(0);
+}
+
+#nav-open span:after {
+    bottom: -9px;
+    transform: rotate(0);
+}
+
+#nav-open span, #nav-open span:before, #nav-open span:after {
+    transition: all 0.3s ease-in-out;
+}
+
+#nav-open.true span {
+    background-color: transparent;
+}
+
+#nav-open.true span:before, #nav-open.true span:after {
+    bottom: -9px;
+}
+
+#nav-open.true span:before {
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+#nav-open.true span:after {
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+}
+     
