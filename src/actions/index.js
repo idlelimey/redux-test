@@ -9,13 +9,15 @@ export function defaultFunction() {
     };
 }
 
-export function setPage() {
+export function setPage(scrollTop) {
     let p = window.location.hash.replace('#','');
     if(p === '/'){
         p = 'home';
     } else {
         p = p.replace('/','');
     }
+    // Scroll to top, function is only used on navigate so no conditions.
+    window.scrollTo(0, 0);
     return {
         type: "SET_PAGE",
         payload: p

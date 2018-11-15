@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { setPage} from './actions';
-import { Container, Row, Col } from 'reactstrap';
+import {
+    Container,
+    Row,
+    Col,
+    Button
+} from 'reactstrap';
 import HomeBg from './images/home.jpg';
 
 const styles = {
     custom: {
-        backgroundImage : `url(${HomeBg})`,
-        backgroundSize  : 'cover',
-        height          : '100vh'
+        backgroundImage     : `url(${HomeBg})`,
+        backgroundSize      : 'cover',
+        height              : '100vh',
+        backgroundPosition  : '50% 100%'
     }
 };
 
@@ -20,16 +27,17 @@ class Home extends Component {
     
     render() {
         return (
-
-            <Container style={styles.custom}>
+            <Container fluid style={styles.custom}>
                 <Row className='align-items-center h-100'>
                     <Col>
-                       
                         <p className="text-center lead">Hello.</p>
+                        <p className="text-center">
+                            <Button outline color="dark" size="sm" tag={Link} to="/page">Page</Button>&nbsp;
+                            <Button outline color="dark" size="sm" tag={Link} to="/cards">Cards</Button>
+                        </p>
                     </Col>
                 </Row>
             </Container>
-
         );
     }
 }

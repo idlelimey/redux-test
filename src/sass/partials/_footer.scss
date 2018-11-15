@@ -1,0 +1,17 @@
+footer {
+    background-color: $lightest-grey;
+    border-top: 1px solid $lighter-grey;
+
+    & > .row {
+
+        padding: 2rem 0;
+        margin-top: 2rem;        
+    }
+
+    & p {
+        color: $default-grey;
+    }
+    & .logo {
+        width:3rem;
+    }
+}

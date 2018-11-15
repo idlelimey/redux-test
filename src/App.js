@@ -17,6 +17,7 @@ import Home     from './Home';
 import Page     from './Page';
 import Contact  from './Contact';
 import Cards    from './Cards';
+import Footer   from './Footer';
 
 class App extends Component {
 
@@ -29,7 +30,7 @@ class App extends Component {
     render() {
         return (
             <HashRouter>
-                <Container id='site' className={this.props.site.theme + ' ' + this.props.site.page}>
+                <Container fluid id='site' className={this.props.site.theme + ' ' + this.props.site.page}>
                     <Menu currentTheme={this.props.site.theme} />
                     <section id='content'>
                         <Route exact path="/" component={Home} />
@@ -37,16 +38,12 @@ class App extends Component {
                         <Route path="/contact/" component={Contact} />
                         <Route path="/cards" component={Cards} />
                     </section>
-                    <footer>
-                        Footer Component goes here.
-                        <button onClick={() => this.props.setTheme(this.props.site.theme)}>{this.props.site.theme}</button>
-                    </footer>
+                    <Footer />
                 </Container>
             </HashRouter>
         );
     }
 }
-
 
 // function to convert the global state obtained from redux to local props
 function mapStateToProps(state) {
@@ -54,8 +51,6 @@ function mapStateToProps(state) {
     site: state.site
   };
 }
-
-
 export default connect(mapStateToProps, {
     defaultFunction,
     setTheme,

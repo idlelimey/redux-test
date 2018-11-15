@@ -1,6 +1,6 @@
 $menu-icon-button-size : 3rem;
 
-#root {
+#site {
     .menu-icon-button {
         display     : block;
         height      : $menu-icon-button-size;
@@ -37,13 +37,27 @@ $menu-icon-button-size : 3rem;
 
     }
 
-    & > div.dark {
+    &.dark {
         #menu {
-            background: $dark-bg;
+            background: $dark-grey;
         }
         .theme-switch {
-            color       : white;
+            color       : $dark-dark-grey;
         }
+        #nav-open span, #nav-open span:before, #nav-open span:after {
+            background: $dark-dark-grey;
+        }
+        #nav-open.true span {
+            background-color: transparent;
+        }
+    }
+    &.home {
+        #menu {
+            background: transparent;
+        }
+    }
+    &:not(.home){
+        padding-top:3rem;
     }
 }
 
@@ -71,7 +85,7 @@ $menu-icon-button-size : 3rem;
     cursor: pointer;
     height: 2px;
     width: 26px;
-    background: black;
+    background: $dark-grey;
     position: absolute;
     display: block;
     content: '';

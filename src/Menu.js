@@ -36,7 +36,7 @@ class Menu extends Component {
                 <Collapse isOpen={this.state.collapse}>
                     <Container>
                         <Row>
-                            <Col>
+                            <Col md="6">
                                 <Nav vertical>
                                     <NavItem>
                                         <NavLink tag={RRNavLink} activeClassName="active" exact to="/" onClick={this.toggle}>Home</NavLink>
@@ -51,9 +51,12 @@ class Menu extends Component {
                                         <NavLink tag={RRNavLink} activeClassName="active" to="/cards" onClick={this.toggle}>Cards</NavLink>
                                     </NavItem>
                                 </Nav> 
+                                
+                            </Col>
+                            <Col md="6">
+                                <p>Change Theme:</p>
                                 <span className="menu-icon-button theme-switch" onClick={() => this.props.setTheme(this.props.site.theme)}>&#9680;</span>
                             </Col>
-
                         </Row>
                     </Container>
                 </Collapse>
