@@ -1,0 +1,38 @@
+$icon-size-sm : 1rem;
+$icon-size-md : 2rem;
+$icon-size-lg : 3rem;
+$icon-size-xl : 4rem;
+
+#site {
+    svg.icon {
+        fill    : $dark-grey;
+        margin  : 1rem;
+        display : block;
+        /* sizes */
+        &.sm {
+            width   : $icon-size-sm;
+            height  : $icon-size-sm;
+        }
+        &.md {
+            width   : $icon-size-md;
+            height  : $icon-size-md;
+        }
+        &.lg {
+            width   : $icon-size-lg;
+            height  : $icon-size-lg;
+        }
+        &.xl {
+            width   : $icon-size-xl;
+            height  : $icon-size-xl;
+        }
+        &.center {
+            margin  : 1rem auto;
+        }
+    }
+
+    &.dark {
+        svg.icon {
+            fill: $dark-dark-grey;
+        }
+    }
+}

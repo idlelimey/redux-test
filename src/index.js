@@ -19,7 +19,7 @@ import ReduxPromise from 'redux-promise';
 const initialState = {
     site : {
         page    : 'home',
-        theme   : 'light'
+        theme   : 'dark'
     }
 };
 

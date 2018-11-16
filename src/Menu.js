@@ -5,6 +5,8 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {
+    Button,
+    ButtonGroup,
     Container,
     Col,
     Nav,
@@ -31,35 +33,37 @@ class Menu extends Component {
 
     render() {
         return (
-            <Container id="menu" className="no-padding fixed-top"> 
-                <button onClick={this.toggle} id="nav-open" className={'menu-icon-button ' + this.state.collapse}><span></span></button>
+            <Container id="menu" fluid className="no-padding fixed-top"> 
                 <Collapse isOpen={this.state.collapse}>
                     <Container>
                         <Row>
-                            <Col md="6">
-                                <Nav vertical>
+                            <Col md="6" className="mb-5 mt-3">
+                                <Nav vertical pills>
                                     <NavItem>
-                                        <NavLink tag={RRNavLink} activeClassName="active" exact to="/" onClick={this.toggle}>Home</NavLink>
+                                        <NavLink tag={RRNavLink} activeClassName="active" exact to="/" onClick={this.toggle} >Home</NavLink>
                                     </NavItem>
                                     <NavItem>
-                                        <NavLink tag={RRNavLink} activeClassName="active" to="/page" onClick={this.toggle}>Page</NavLink>
+                                        <NavLink tag={RRNavLink} activeClassName="active" to="/page" onClick={this.toggle} >Page</NavLink>
                                     </NavItem>
                                     <NavItem>
-                                        <NavLink tag={RRNavLink} activeClassName="active" to="/contact" onClick={this.toggle}>Form</NavLink>
+                                        <NavLink tag={RRNavLink} activeClassName="active" to="/contact" onClick={this.toggle} >Form</NavLink>
                                     </NavItem>
                                     <NavItem>
-                                        <NavLink tag={RRNavLink} activeClassName="active" to="/cards" onClick={this.toggle}>Cards</NavLink>
+                                        <NavLink tag={RRNavLink} activeClassName="active" to="/cards" onClick={this.toggle} >Cards</NavLink>
                                     </NavItem>
                                 </Nav> 
-                                
                             </Col>
                             <Col md="6">
                                 <p>Change Theme:</p>
-                                <span className="menu-icon-button theme-switch" onClick={() => this.props.setTheme(this.props.site.theme)}>&#9680;</span>
+                                <ButtonGroup>
+                                    <Button color="primary" onClick={() => this.props.setTheme('dark')} active={this.props.site.theme === 'light'}>Light</Button>
+                                    <Button color="primary" onClick={() => this.props.setTheme('light')} active={this.props.site.theme === 'dark'}>Dark</Button>
+                                </ButtonGroup>
                             </Col>
                         </Row>
                     </Container>
                 </Collapse>
+                <button onClick={this.toggle} id="nav-open" className={'menu-icon-button ' + this.state.collapse}><span></span></button>
             </Container>
         );
     }

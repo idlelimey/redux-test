@@ -21,7 +21,13 @@ const styles = {
 
 class Home extends Component {
 
+    componentWillMount(){
+        console.log('\'home\' will mount');
+    }
+        
+
     componentDidMount() {
+        console.log('\'home\' did mount');
         this.props.setPage();
     }
     
@@ -35,6 +41,7 @@ class Home extends Component {
                             <Button outline color="dark" size="sm" tag={Link} to="/page">Page</Button>&nbsp;
                             <Button outline color="dark" size="sm" tag={Link} to="/cards">Cards</Button>
                         </p>
+
                     </Col>
                 </Row>
             </Container>

@@ -15,3 +15,12 @@ footer {
         width:3rem;
     }
 }
+
+#site {
+    &.dark {
+        footer {
+            background: $light-grey ;
+            border-top: 1px solid $dark-lighter-grey;
+        }
+    }
+}

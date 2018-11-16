@@ -22,10 +22,13 @@ import Footer   from './Footer';
 class App extends Component {
 
     componentDidMount() {
-        // call default function to display redux operation
         this.props.defaultFunction();
     }
 
+    showFooter(){
+        if ( this.props.site.page === 'home' ) return null;
+        return (<Footer />);
+    }
 
     render() {
         return (
@@ -38,7 +41,7 @@ class App extends Component {
                         <Route path="/contact/" component={Contact} />
                         <Route path="/cards" component={Cards} />
                     </section>
-                    <Footer />
+                    {this.showFooter()}
                 </Container>
             </HashRouter>
         );
