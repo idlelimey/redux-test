@@ -10,11 +10,11 @@ import './images/icons.svg';
 class Icon extends React.Component {
     
     render() {
-        let size = this.props.size === undefined ? ' md' : ' ' + this.props.size;
-        let center = this.props.center === true ? ' center' : '';
+        let size    = this.props.size === undefined ? ' md' : ` ${this.props.size}`;
+        let center  = this.props.center === true ? ' center' : '';
         return (
 
-            <svg className={'icon icon-' + this.props.name + size + center} title={this.props.name}>
+            <svg className={`icon icon-${this.props.name} ${size} ${center}`} title={this.props.name}>
                 <use xlinkHref={`#${this.props.name}`} />
             </svg>             
 

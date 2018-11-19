@@ -21,6 +21,12 @@ import Footer   from './Footer';
 
 class App extends Component {
 
+    componentWillMount() {
+        if(localStorage.getItem('theme')){
+            this.props.site.theme = localStorage.getItem('theme');
+        }        
+    }
+
     componentDidMount() {
         this.props.defaultFunction();
     }
@@ -33,7 +39,7 @@ class App extends Component {
     render() {
         return (
             <HashRouter>
-                <Container fluid id='site' className={this.props.site.theme + ' ' + this.props.site.page}>
+                <Container fluid id='site' className={`${this.props.site.theme} ${this.props.site.page}`}>
                     <Menu currentTheme={this.props.site.theme} />
                     <section id='content'>
                         <Route exact path="/" component={Home} />

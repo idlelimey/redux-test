@@ -25,7 +25,29 @@ export function setPage(scrollTop) {
 }
 
 export function setTheme(t) {
+
     let n = t === 'dark' ? 'light' : 'dark';
+
+    // Let's try to remember the choice for future visits.
+    // Detect and use localStoreage if available.
+    function storageAvailable(type) {
+        try {
+            let storage = window[type],
+                x = '__storage_test__';
+            storage.setItem(x, x);
+            storage.removeItem(x);
+            return true;
+        }
+        catch(e) {
+            return false;
+        }
+    }
+    if (storageAvailable('localStorage')) {
+        localStorage.setItem('theme',n);
+    } else {
+        console.warn('No localStorage');
+    }
+
     return {
         type: "SET_THEME",
         payload: n

@@ -8,32 +8,28 @@ import {
     Col,
     Button
 } from 'reactstrap';
-import HomeBg from './images/home.jpg';
+
+import LightHomeBg from './images/light-home.jpg';
+//import DarkHomeBg from './images/dark-home.jpg';
+
+
 
 const styles = {
     custom: {
-        backgroundImage     : `url(${HomeBg})`,
-        backgroundSize      : 'cover',
-        height              : '100vh',
-        backgroundPosition  : '50% 100%'
+        backgroundImage     : `url(${ LightHomeBg })`,
     }
 };
 
+
 class Home extends Component {
 
-    componentWillMount(){
-        console.log('\'home\' will mount');
-    }
-        
-
     componentDidMount() {
-        console.log('\'home\' did mount');
         this.props.setPage();
     }
     
     render() {
         return (
-            <Container fluid style={styles.custom}>
+            <Container fluid style={styles.custom} className="home-bg">
                 <Row className='align-items-center h-100'>
                     <Col>
                         <p className="text-center lead">Hello.</p>
@@ -41,7 +37,6 @@ class Home extends Component {
                             <Button outline color="dark" size="sm" tag={Link} to="/page">Page</Button>&nbsp;
                             <Button outline color="dark" size="sm" tag={Link} to="/cards">Cards</Button>
                         </p>
-
                     </Col>
                 </Row>
             </Container>

@@ -63,7 +63,7 @@ class Menu extends Component {
                         </Row>
                     </Container>
                 </Collapse>
-                <button onClick={this.toggle} id="nav-open" className={'menu-icon-button ' + this.state.collapse}><span></span></button>
+                <button onClick={this.toggle} id="nav-open" className={`menu-icon-button ${this.state.collapse}`}><span></span></button>
             </Container>
         );
     }
