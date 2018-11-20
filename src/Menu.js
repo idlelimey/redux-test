@@ -56,8 +56,8 @@ class Menu extends Component {
                             <Col md="6">
                                 <p>Change Theme:</p>
                                 <ButtonGroup>
-                                    <Button color="primary" onClick={() => this.props.setTheme('dark')} active={this.props.site.theme === 'light'}>Light</Button>
-                                    <Button color="primary" onClick={() => this.props.setTheme('light')} active={this.props.site.theme === 'dark'}>Dark</Button>
+                                    <Button color="primary" onClick={() => this.props.setTheme('light')} active={this.props.site.theme === 'light'}>Light</Button>
+                                    <Button color="primary" onClick={() => this.props.setTheme('dark')} active={this.props.site.theme === 'dark'}>Dark</Button>
                                 </ButtonGroup>
                             </Col>
                         </Row>
@@ -72,11 +72,8 @@ class Menu extends Component {
 // function to convert the global state obtained from redux to local props
 function mapStateToProps(state) {
     return {
-      site: state.site
+        site: state.site
     };
-  }
-  
-  
-  export default connect(mapStateToProps, {
-      setTheme
-  })(Menu);
+}
+
+export default connect(mapStateToProps, { setTheme })(Menu);

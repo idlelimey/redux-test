@@ -18,7 +18,7 @@ $menu-icon-button-size : 3rem;
     #menu {
         .collapse.show, .collapsing {
             box-shadow: 0 0 1rem rgba(darken($primary, 33%), 0.5);
-            background: $dark-dark-grey;
+            background: $harder-light;
             backdrop-filter: blur(3px);
         }
         .nav-item {
@@ -28,31 +28,31 @@ $menu-icon-button-size : 3rem;
     &.home {
         #menu {
             .collapse.show, .collapsing {
-                background:$dark-darker-grey;
+                background:$hardest-light;
             }
         }
     }
     &.dark {
         #menu {
             .collapse.show, .collapsing {
-                background: $dark-grey;
+                background: $harder-dark;
             }
         }
         &.home {
             #nav-open {
                 span, span:before, span:after {
-                    background: $dark-grey;
+                    background: $harder-dark;
                 }
             }
         }   
         #nav-open {
             span, span:before, span:after {
-                background: $dark-dark-grey;
+                background: $harder-light;
             }
         }
         #nav-open.true {
             span:before, span:after {
-                background: $dark-dark-grey;
+                background: $harder-light;
             }
         } 
         #nav-open.true span {
@@ -87,7 +87,7 @@ $menu-icon-button-size : 3rem;
         cursor: pointer;
         height: 2px;
         width: 26px;
-        background: $dark-grey;
+        background: $harder-dark;
         position: absolute;
         display: block;
         content: '';

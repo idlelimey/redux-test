@@ -21,14 +21,11 @@ import Footer   from './Footer';
 
 class App extends Component {
 
-    componentWillMount() {
-        if(localStorage.getItem('theme')){
-            this.props.site.theme = localStorage.getItem('theme');
-        }        
-    }
-
     componentDidMount() {
         this.props.defaultFunction();
+        if(localStorage.getItem('theme')){
+            this.props.setTheme( localStorage.getItem('theme') );
+        }
     }
 
     showFooter(){
@@ -56,9 +53,9 @@ class App extends Component {
 
 // function to convert the global state obtained from redux to local props
 function mapStateToProps(state) {
-  return {
-    site: state.site
-  };
+    return {
+        site: state.site
+    };
 }
 export default connect(mapStateToProps, {
     defaultFunction,

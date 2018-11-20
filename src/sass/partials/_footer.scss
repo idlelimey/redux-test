@@ -1,6 +1,6 @@
 footer {
-    background-color: $lightest-grey;
-    border-top: 1px solid $lighter-grey;
+    background-color: $softest-dark;
+    border-top: 1px solid $softer-dark;
 
     & > .row {
 
@@ -9,7 +9,7 @@ footer {
     }
 
     & p {
-        color: $default-grey;
+        color: $default-dark;
     }
     & .logo {
         width:3rem;
@@ -19,8 +19,8 @@ footer {
 #site {
     &.dark {
         footer {
-            background: $light-grey ;
-            border-top: 1px solid $dark-lighter-grey;
+            background: $soft-dark;
+            border-top: 1px solid $softer-light;
         }
     }
 }

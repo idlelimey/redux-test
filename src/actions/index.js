@@ -9,7 +9,7 @@ export function defaultFunction() {
     };
 }
 
-export function setPage(scrollTop) {
+export function setPage() {
     let p = window.location.hash.replace('#','');
     if(p === '/'){
         p = 'home';
@@ -19,14 +19,12 @@ export function setPage(scrollTop) {
     // Scroll to top, function is only used on navigate so no conditions.
     window.scrollTo(0, 0);
     return {
-        type: "SET_PAGE",
+        type: 'SET_PAGE',
         payload: p
     };
 }
 
 export function setTheme(t) {
-
-    let n = t === 'dark' ? 'light' : 'dark';
 
     // Let's try to remember the choice for future visits.
     // Detect and use localStoreage if available.
@@ -43,13 +41,11 @@ export function setTheme(t) {
         }
     }
     if (storageAvailable('localStorage')) {
-        localStorage.setItem('theme',n);
-    } else {
-        console.warn('No localStorage');
+        localStorage.setItem('theme', t);
     }
 
     return {
-        type: "SET_THEME",
-        payload: n
+        type: 'SET_THEME',
+        payload: t
     };
 }
