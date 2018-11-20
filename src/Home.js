@@ -1,33 +1,27 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { setPage} from './actions';
-import {
+import { setPage } from './actions';
+import { 
     Container,
     Row,
     Col,
-    Button
+    Button 
 } from 'reactstrap';
-
 import LightHomeBg from './images/light-home.jpg';
-//import DarkHomeBg from './images/dark-home.jpg';
-
-
+// import DarkHomeBg from './images/dark-home.jpg';
 
 const styles = {
     custom: {
-        backgroundImage     : `url(${ LightHomeBg })`,
+        backgroundImage: `url(${LightHomeBg})`
     }
 };
 
-
 class Home extends Component {
-
-    componentDidMount() {
+    componentDidMount () {
         this.props.setPage();
     }
-    
-    render() {
+    render () {
         return (
             <Container fluid style={styles.custom} className="home-bg">
                 <Row className='align-items-center h-100'>
@@ -45,7 +39,7 @@ class Home extends Component {
 }
 
 // Required for setPage
-function mapStateToProps(state) {
+function mapStateToProps (state) {
     return {
         site: state.site
     };

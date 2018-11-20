@@ -3,20 +3,23 @@ $border-radius-lg: 0rem !default;
 $border-radius-sm: 0rem !default;
 
 // colors
-$default-grey       : rgba(black, 0.33);
-$darker-grey        : rgba(black, 0.85);
-$dark-grey          : rgba(black, 0.66);
-$light-grey         : rgba(black, 0.10);
-$lighter-grey       : rgba(black, 0.05);
-$lightest-grey      : rgba(black, 0.01);
+$base-dark          : rgba(black, 1);
+$softest-dark       : rgba( $base-dark, 0.01 );
+$softer-dark        : rgba( $base-dark, 0.05 );
+$soft-dark          : rgba( $base-dark, 0.10 );
+$default-dark       : rgba( $base-dark, 0.33 );
+$hard-dark          : rgba( $base-dark, 0.50 );
+$harder-dark        : rgba( $base-dark, 0.85 );
+$hardest-dark       : rgba( $base-dark, 0.95 );
 
-// Dark Theme Colours
-$dark-default-grey  : rgba(white, 0.33);
-$dark-darker-grey   : rgba(white, 0.95);
-$dark-dark-grey     : rgba(white, 0.85);
-$dark-light-grey    : rgba(white, 0.10);
-$dark-lighter-grey  : rgba(white, 0.05);
-$dark-lightest-grey : rgba(white, 0.01);
+$base-light         : rgba(white, 1);
+$softest-light      : rgba( $base-light, 0.01 );
+$softer-light       : rgba( $base-light, 0.05 );
+$soft-light         : rgba( $base-light, 0.10 );
+$default-light      : rgba( $base-light, 0.33 );
+$hard-light         : rgba( $base-light, 0.50 );
+$harder-light       : rgba( $base-light, 0.85 );
+$hardest-light      : rgba( $base-light, 0.95 );
 
 
 $primary            : #4EB793;
@@ -49,32 +52,32 @@ $info               : #88d5bb;  // What's this for?
         /* Dark Theme */
         background: $dark-bg ;
         &:not(.home) * {
-            color: $dark-dark-grey;
+            color: $harder-light;
         }
         #menu * {
-            color: $dark-dark-grey;
+            color: $harder-light;
         }
         hr {
-            border-top: 1px solid $dark-light-grey;
+            border-top: 1px solid $soft-light;
         }
         .card {
-            border: 1px solid $dark-lighter-grey;
+            border: 1px solid $softer-light;
             & .card-header {
-                border-bottom: 1px solid $dark-lighter-grey;
+                border-bottom: 1px solid $softer-light;
             }
             & .card-footer {
-                border-top: 1px solid $dark-lighter-grey;
+                border-top: 1px solid $softer-light;
             }
             .card-header, .card-footer {
-                background: $dark-lightest-grey;
+                background: $softest-light;
             }
         }
         .form-control {
-            border: 1px solid $dark-light-grey;
-            background: $dark-lighter-grey;
+            border: 1px solid $soft-light;
+            background: $softer-light;
         }
         .jumbotron {
-            background: $dark-lightest-grey;
+            background: $softest-light;
         }
     }
     &.home {
@@ -92,7 +95,7 @@ $info               : #88d5bb;  // What's this for?
 /* Bootstrap Overwrite & Site wide styles */
 
 hr {
-    border-top: 1px solid $lighter-grey;
+    border-top: 1px solid $softer-dark;
 }
 
 .btn {
@@ -113,23 +116,29 @@ hr {
 }
 
 .jumbotron {
-    background: $lightest-grey;
+    background: $softest-dark;
 }
 
 .form-control {
-    border: 1px solid $light-grey;
+    border: 1px solid $soft-dark;
 }
 
 .card {
     background: transparent;
-    border: 1px solid $lighter-grey;
+    border: 1px solid $softer-dark;
     & .card-header {
-        border-bottom: 1px solid $lighter-grey;
+        border-bottom: 1px solid $softer-dark;
     }
     & .card-footer {
-        border-top: 1px solid $lighter-grey;
+        border-top: 1px solid $softer-dark;
     }
     .card-header, .card-footer {
-        background: $lightest-grey;
+        background: $softest-dark;
     }
+}
+code {
+    font-family: Consolas, monospace !important;
+    background: rgba($primary, 0.05);
+    color: $primary !important;
+    padding: 0.25rem;
 }

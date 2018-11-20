@@ -22,6 +22,10 @@ import Footer   from './Footer';
 class App extends Component {
 
     componentWillMount() {
+        /* 
+            WILL BE DEPRECATED FROM REACT v16.3.0
+            Consider alternative.  Doesn't work in componentDidMount() :(
+        */
         if(localStorage.getItem('theme')){
             this.props.site.theme = localStorage.getItem('theme');
         }        
@@ -56,9 +60,9 @@ class App extends Component {
 
 // function to convert the global state obtained from redux to local props
 function mapStateToProps(state) {
-  return {
-    site: state.site
-  };
+    return {
+        site: state.site
+    };
 }
 export default connect(mapStateToProps, {
     defaultFunction,

@@ -5,7 +5,7 @@ $icon-size-xl : 4rem;
 
 #site {
     svg.icon {
-        fill    : $dark-grey;
+        fill    : $harder-dark;
         margin  : 1rem;
         display : block;
         /* sizes */
@@ -32,7 +32,7 @@ $icon-size-xl : 4rem;
 
     &.dark {
         svg.icon {
-            fill: $dark-dark-grey;
+            fill: $harder-light;
         }
     }
 }
