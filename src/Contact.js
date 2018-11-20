@@ -58,7 +58,6 @@ class Contact extends Component {
                         <Col xs="12">
                             <h2>Contacts</h2>
                             <p>Contacts taken from JSON file containing various app data.  From here we are just pulling <code>people</code>.</p>
-                            
                         </Col>
                         <Col dangerouslySetInnerHTML = {this.getContacts()} />
                     </Row>

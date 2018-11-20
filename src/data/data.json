@@ -1,26 +1,34 @@
 {
     "posts" : [
         {
-            "title"   : "Post One Title",
-            "body"    : "<p>This is the body content for post one. It lives in a JSON file, it is not dynamically generated.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>"
+            "title"         : "Post One Title",
+            "sub-heading"   : "This post has a sub-heading.", 
+            "body"          : "<p>This is the body content for post one. It has a sub-heading.  It lives in a JSON file, it is not dynamically generated.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>"
         },
         {
             "title"   : "Post Two Title",
-            "body"    : "<p>This is the body content for post two.  It lives in a JSON file, it is not dynamically generated.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>"
+            "body"    : "<p>This is the body content for post two.  It does not have a sub-heading.  It lives in a JSON file, it is not dynamically generated.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>"
+        },
+        {
+            "title"   : "Post Two Title",
+            "body"    : "<p>This is the body content for post two.  It has an empty sub-heading.  It lives in a JSON file, it is not dynamically generated.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>"
         }
     ],
     "people" : [
         {
+            "id"    : 1,
             "name"  : "Tim Cutting",
             "age"   : 39,
             "email" : "tim.cutting@gfm.co.uk"
         },
         {
+            "id"    : 2,
             "name"  : "Joe Bloggs",
             "age"   : 52,
             "email" : "joe.bloggs@gfm.co.uk"
         },
         {
+            "id"    : 3,
             "name"  : "Jane Doe",
             "age"   : 28,
             "email" : "jane.doe@gfm.co.uk"

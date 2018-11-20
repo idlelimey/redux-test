@@ -21,18 +21,11 @@ import Footer   from './Footer';
 
 class App extends Component {
 
-    componentWillMount() {
-        /* 
-            WILL BE DEPRECATED FROM REACT v16.3.0
-            Consider alternative.  Doesn't work in componentDidMount() :(
-        */
-        if(localStorage.getItem('theme')){
-            this.props.site.theme = localStorage.getItem('theme');
-        }        
-    }
-
     componentDidMount() {
         this.props.defaultFunction();
+        if(localStorage.getItem('theme')){
+            this.props.setTheme( localStorage.getItem('theme') );
+        }
     }
 
     showFooter(){
