@@ -37,23 +37,26 @@ class Menu extends Component {
                 <Collapse isOpen={this.state.collapse}>
                     <Container>
                         <Row>
-                            <Col md="6" className="mb-5 mt-3">
+                            <Col md="8" className="mb-5 mt-3">
                                 <Nav vertical pills>
                                     <NavItem>
                                         <NavLink tag={RRNavLink} activeClassName="active" exact to="/" onClick={this.toggle} >Home</NavLink>
                                     </NavItem>
                                     <NavItem>
-                                        <NavLink tag={RRNavLink} activeClassName="active" to="/page" onClick={this.toggle} >Page</NavLink>
+                                        <NavLink tag={RRNavLink} activeClassName="active" to="/page" onClick={this.toggle} >Example Page</NavLink>
                                     </NavItem>
                                     <NavItem>
-                                        <NavLink tag={RRNavLink} activeClassName="active" to="/contact" onClick={this.toggle} >Form</NavLink>
+                                        <NavLink tag={RRNavLink} activeClassName="active" to="/posts" onClick={this.toggle} >Some Posts</NavLink>
+                                    </NavItem>                                  
+                                    <NavItem>
+                                        <NavLink tag={RRNavLink} activeClassName="active" to="/contact" onClick={this.toggle}>Example Form</NavLink>
                                     </NavItem>
                                     <NavItem>
                                         <NavLink tag={RRNavLink} activeClassName="active" to="/cards" onClick={this.toggle} >Cards</NavLink>
                                     </NavItem>
                                 </Nav> 
                             </Col>
-                            <Col md="6">
+                            <Col md="4">
                                 <p>Change Theme:</p>
                                 <ButtonGroup>
                                     <Button color="primary" onClick={() => this.props.setTheme('light')} active={this.props.site.theme === 'light'}>Light</Button>

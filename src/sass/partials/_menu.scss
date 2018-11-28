@@ -18,11 +18,8 @@ $menu-icon-button-size : 3rem;
     #menu {
         .collapse.show, .collapsing {
             box-shadow: 0 0 1rem rgba(darken($primary, 33%), 0.5);
-            background: $harder-light;
+            background: $hardest-light;
             backdrop-filter: blur(3px);
-        }
-        .nav-item {
-            max-width:15rem;
         }
     }
     &.home {
@@ -106,4 +103,12 @@ $menu-icon-button-size : 3rem;
             }
         }
     }
-}  
+}
+
+@include media-breakpoint-up(md) {
+    #menu {
+        .nav-item {
+            max-width:15rem;
+        }
+    }
+}
