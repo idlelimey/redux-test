@@ -12,7 +12,7 @@ class Posts extends Component {
             markup += '<div class="col-12 col-md-6">';
             markup += `<h2>${post.title}</h2>`;
             if( post.subtitle ){
-                if ( post.subtitle != undefined ){
+                if ( post.subtitle !== undefined ){
                     markup += `<p class="lead">${post.subtitle}</p>`;
                 }
             }

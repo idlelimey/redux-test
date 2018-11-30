@@ -54,6 +54,9 @@ class Menu extends Component {
                                     <NavItem>
                                         <NavLink tag={RRNavLink} activeClassName="active" to="/cards" onClick={this.toggle} >Cards</NavLink>
                                     </NavItem>
+                                    <NavItem>
+                                        <NavLink tag={RRNavLink} activeClassName="active" to="/contrast" onClick={this.toggle} >Contrast Ratio</NavLink>
+                                    </NavItem>
                                 </Nav> 
                             </Col>
                             <Col md="4">
