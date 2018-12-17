@@ -1,0 +1,52 @@
+.contrast {
+    #example {
+        padding: 1rem;
+    }
+
+    .rgb-inputs {
+        .row {
+            padding:0.5rem 0;
+        }
+    }
+    label, span.circle {
+        display:inline-block;
+        height:2rem;
+        width:2rem;
+        line-height:2rem;
+        text-align: center;
+        border-radius: 2rem;
+        margin-right: 0.5rem;
+    }
+    span.circle {
+        border-top: 0.25rem solid black;
+        border-bottom: 0.25rem solid white;
+        border-left: 0.25rem solid white;
+        border-right: 0.25rem solid black;
+        box-sizing: border-box;
+    }
+    label[for$="-r"] {
+        background: rgba(255,0,0,0.25);
+    }
+    label[for$="-g"] {
+        background: rgba(0,255,0,0.25);
+    }
+    label[for$="-b"] {
+        background: rgba(0,0,255,0.25);
+    }
+
+    .result {
+        text-align:center; padding: 0.5rem;
+    }
+    .result.fail {
+        border: 1px solid rgb(225,75,75);
+        background: rgba(225,75,75,0.1);
+    }
+    .result.aa {
+        border: 1px solid rgb(231, 197, 85);
+        background: rgba(231, 197, 85, 0.1);                
+    } 
+    .result.aaa {
+        border: 1px solid rgb(75,200,75);
+        background: rgba(75,200,75,0.1);                
+    }    
+}

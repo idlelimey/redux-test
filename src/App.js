@@ -15,8 +15,10 @@ import {
 import Menu     from './Menu';
 import Home     from './Home';
 import Page     from './Page';
+import Posts    from './Posts';
 import Contact  from './Contact';
 import Cards    from './Cards';
+import Contrast from './Contrast';
 import Footer   from './Footer';
 
 class App extends Component {
@@ -41,8 +43,10 @@ class App extends Component {
                     <section id='content'>
                         <Route exact path="/" component={Home} />
                         <Route path="/page" component={Page} />
+                        <Route path="/posts" component={Posts} />
                         <Route path="/contact/" component={Contact} />
                         <Route path="/cards" component={Cards} />
+                        <Route path="/contrast" component={Contrast} />
                     </section>
                     {this.showFooter()}
                 </Container>

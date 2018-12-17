@@ -33,6 +33,7 @@ $info               : #88d5bb;  // What's this for?
 @import 'bootstrap/scss/bootstrap.scss';
 @import 'partials/typography';
 @import 'partials/menu';
+@import 'partials/contrast';
 @import 'partials/footer';
 @import 'partials/icons';
 
@@ -52,8 +53,12 @@ $info               : #88d5bb;  // What's this for?
         /* Dark Theme */
         background: $dark-bg ;
         &:not(.home) * {
+            /* Most overwrites will go here */
             color: $harder-light;
-        }
+            a {
+                color: $primary;
+            }
+        }      
         #menu * {
             color: $harder-light;
         }

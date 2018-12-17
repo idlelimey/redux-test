@@ -31,7 +31,7 @@ class Contact extends Component {
                 <Container>
                     <Row>
                         <Col>
-                            <h1>Form Page</h1>
+                            <h1>A Form Page</h1>
                         </Col>
                     </Row>
                     <Row>

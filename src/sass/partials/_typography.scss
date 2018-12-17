@@ -57,11 +57,24 @@ h6 {
     font-size: 0.875rem;
 }
 
-p,label {
+p,a {
     font-size: 1.125rem;
     font-weight: 200;
     &::selection {
         background-color: $primary;
         color: lighten($primary, 66);
+    }
+}
+
+/* Customise ul>li bullets */
+ul:not(.nav) {
+    list-style: none;
+    padding: 0;
+    li {
+        &::before {
+            content: '\25AA';
+            color: $primary;
+            margin: 0 1rem 0 0;
+        }
     }
 }

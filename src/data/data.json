@@ -1,17 +1,23 @@
 {
     "posts" : [
         {
-            "title"         : "Post One Title",
-            "sub-heading"   : "This post has a sub-heading.", 
-            "body"          : "<p>This is the body content for post one. It has a sub-heading.  It lives in a JSON file, it is not dynamically generated.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>"
+            "title"     : "Post One Title",
+            "subtitle"  : "This post has a sub-title.", 
+            "body"      : "<p>This is the body content for post one. It has a sub-heading.  It lives in a JSON file, it is not dynamically generated.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>"
         },
         {
-            "title"   : "Post Two Title",
-            "body"    : "<p>This is the body content for post two.  It does not have a sub-heading.  It lives in a JSON file, it is not dynamically generated.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>"
+            "title"     : "Post Two Title",
+            "body"      : "<p>This is the body content for post two.  It does not have a sub-heading.  It lives in a JSON file, it is not dynamically generated.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>"
         },
         {
-            "title"   : "Post Two Title",
-            "body"    : "<p>This is the body content for post two.  It has an empty sub-heading.  It lives in a JSON file, it is not dynamically generated.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>"
+            "title"     : "Post Three Title",
+            "subtitle"  : "",
+            "body"      : "<p>This is the body content for post three.  It has an <em>empty</em> sub-heading.  It lives in a JSON file, it is not dynamically generated.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>"
+        },
+        {
+            "title"         : "Post Four Title",
+            "subtitle"      : "This post also has a sub-title.", 
+            "body"          : "<p>This is the body content for post four. It has a sub-heading.  It lives in a JSON file, it is not dynamically generated.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>"
         }
     ],
     "people" : [
