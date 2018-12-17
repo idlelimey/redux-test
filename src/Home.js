@@ -8,7 +8,7 @@ import {
     Col,
     Button 
 } from 'reactstrap';
-import LightHomeBg from './images/light-home.jpg';
+import LightHomeBg from './images/light-home2.jpg';
 // import DarkHomeBg from './images/dark-home.jpg';
 
 const styles = {

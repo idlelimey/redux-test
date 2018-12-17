@@ -17,9 +17,9 @@ import rootReducers from './reducers';
 import ReduxPromise from 'redux-promise';
 
 const initialState = {
-    site : {
-        page    : 'home',
-        theme   : 'dark'
+    site: {
+        page: 'home',
+        theme: 'light'
     }
 };
 
@@ -30,6 +30,6 @@ const store = createStore(
 );
 
 
-ReactDOM.render( <Provider store={store}><App /></Provider> , document.getElementById('root') );
+ReactDOM.render( <Provider store={store}><App /></Provider>, document.getElementById('root') );
 
 registerServiceWorker();
